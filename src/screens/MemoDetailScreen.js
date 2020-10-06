@@ -22,7 +22,7 @@ class MemoDetailScreen extends React.Component {
         </Text>
       </View>
 
-        <CircleButton name="pencil" color="white" style={styles.editButton} />
+        <CircleButton name="pencil" color="white" style={styles.editButton} onPress={() => {this.props.navigation.navigate('MemoEdit');}} />
       </View>
     );
   }
@@ -35,11 +35,11 @@ const styles = StyleSheet.create({
   },
 
   memoHeader: {
-    height: 170,
+    height: 100,
     backgroundColor: '#17313C',
     justifyContent: 'center',
     padding:10,
-    paddingTop: 70,
+
   },
   memoHeaderTitle: {
     fontSize:20,
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     flex:1,
   },
   editButton:{
-    top:150,
+    top:40,
   },
 });
 

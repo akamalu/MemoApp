@@ -22,8 +22,8 @@ class SignupScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '140%',
-    padding: 100,
+    width: '100%',
+    padding: 50,
     backgroundColor: '#fff',
 
   },
@@ -46,7 +46,7 @@ button :{
   borderRadius: 4,
   justifyContent: 'center',
   alignItems: 'center',
-  width: '65%',
+  width: '55%',
   alignSelf:'center',
 },
 buttonTitle :{
