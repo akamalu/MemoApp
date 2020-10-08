@@ -1,5 +1,7 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import firebase from 'firebase';
+
 
 import MemoListScreen from './src/screens/MemoListScreen';
 import MemoDetailScreen from './src/screens/MemoDetailScreen';
@@ -7,16 +9,33 @@ import MemoEditScreen from './src/screens/MemoEditScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 
+import ENV from './env.json';
+
+const firebaseonfig = {
+ apiKey:                ENV.FIREBASE_API_KEY,
+ authDomain:            ENV.FIREBASE_AUTH_DOMAIN,
+ databaseURL:           ENV.FIREBASE_DB_URL,
+ projectId:             ENV.FIREBASE_PRJ_ID,
+ storageBucket:         ENV.FIREBASE_STORAGE,
+ messagingSenderId: "1061413752239",
+ appId: "1:1061413752239:web:d13d483b3b1aa59d13735a",
+ measurementId: "G-MLW9WXX2CJ",
+};
+firebase.initializeApp(firebaseonfig);
+
 const App = createStackNavigator({
+  Login:      {screen: LoginScreen},
+  Signup:     {screen: SignupScreen},
   Home:       {screen: MemoListScreen},
   MemoDetail: {screen: MemoDetailScreen},
   MemoEdit:   {screen: MemoEditScreen},
-  Login:      {screen: LoginScreen},
-  Signup:     {screen: SignupScreen},
+
 
 }, {
   defaultNavigationOptions: {
     headerTitle: 'Memooo',
+    headerTintColor: '#fff',
+    headerBackTitle: null,
     headerStyle: {
       backgroundColor: '#265366',
       },
