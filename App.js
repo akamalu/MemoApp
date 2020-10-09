@@ -11,19 +11,20 @@ import SignupScreen from './src/screens/SignupScreen';
 
 import ENV from './env.json';
 
-const firebaseonfig = {
+const firebaseconfig = {
  apiKey:                ENV.FIREBASE_API_KEY,
  authDomain:            ENV.FIREBASE_AUTH_DOMAIN,
  databaseURL:           ENV.FIREBASE_DB_URL,
  projectId:             ENV.FIREBASE_PRJ_ID,
  storageBucket:         ENV.FIREBASE_STORAGE,
- messagingSenderId: "1061413752239",
- appId: "1:1061413752239:web:d13d483b3b1aa59d13735a",
- measurementId: "G-MLW9WXX2CJ",
+ messagingSenderId:     ENV.FIREBASE_SENDER_ID,
+ appId:                 ENV.FIREBASE_APP_ID,
+ measurementId:         ENV.FIREBASE_MESUREMENT_ID,
 };
-firebase.initializeApp(firebaseonfig);
+firebase.initializeApp(firebaseconfig);
 
 const App = createStackNavigator({
+
   Login:      {screen: LoginScreen},
   Signup:     {screen: SignupScreen},
   Home:       {screen: MemoListScreen},
