@@ -38,12 +38,12 @@ componentDidMount(){
 
 
     render () {
-    
+      if (this.state.body == null) { return null; }
     return (
       <View style={styles.container}>
         <TextInput
           style={styles.memoEditInput}
-          multiline value={this.state}
+          multiline value={this.state.body}
           onChangeText={(text) => { this.setState({ memo: {body: text } }); }}
           />
         <CircleButton name='check' onPress={this.handlePress.bind(this)}/>
