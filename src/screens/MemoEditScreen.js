@@ -37,8 +37,8 @@ componentDidMount(){
      });
      navigation.goBack();
    })
-   .catch((error) => {
-     console.log(error);
+   .catch(() => {
+
    });
  }
 
