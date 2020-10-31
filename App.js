@@ -42,6 +42,10 @@ const App = createStackNavigator({
     headerTintColor: '#fff',
     headerBackTitle: null,
     headerStyle: {
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
       backgroundColor: '#265366',
       },
     headerTitleStyle: {

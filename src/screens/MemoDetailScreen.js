@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   memoContent: {
-    paddingTop:30,
+    paddingTop:25,
     paddingRight:20,
     paddingLeft:20,
     paddingBottom:20,
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   editButton:{
-    top:40,
+    top:70,
   },
 });
 
